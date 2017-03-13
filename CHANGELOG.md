@@ -1,4 +1,9 @@
 
+## 0.8.8 (2017-03-13)
+- Merge with last [uzyexe/dockerfile-terraform](https://github.com/uzyexe/dockerfile-terraform) version
+- Update to terraform 0.8.8
+- Test fixed
+
 ## 0.7.6 (2016-10-16)
 - Merge with last [uzyexe/dockerfile-terraform](https://github.com/uzyexe/dockerfile-terraform) version
 - Update to terraform 0.7.6

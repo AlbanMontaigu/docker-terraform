@@ -1,6 +1,7 @@
-.PHONY: build test all
+.PHONY: build tests all
 
 DOCKER_IMAGE_NAME=amontaigu/terraform
+TERRAFORM_VERSION="0.8.8"
 
 all: build test
 
@@ -9,10 +10,13 @@ build:
 
 tests:
 	docker run \
-		-v $(CURDIR):/app \
 		-v $$(which docker):$$(which docker) \
 		-v /var/run/docker.sock:/docker.sock \
+		-v $(CURDIR):/app \
+		-w="/app/tests" \
+		-e DOCKER_HOST_CURDIR=$(CURDIR) \
 		-e DOCKER_HOST="unix:///docker.sock" \
 		-e DOCKER_IMAGE_NAME=$(DOCKER_IMAGE_NAME) \
+		-e TERRAFORM_VERSION=$(TERRAFORM_VERSION) \
 		dduportal/bats:0.4.0 \
-			/app/tests/bats/
+			/app/tests/

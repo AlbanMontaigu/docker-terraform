@@ -1,4 +1,7 @@
 
+## 0.9.4 (2017-05-09)
+- Update to terraform 0.9.4
+
 ## 0.9.2 (2017-04-07)
 - Merge with last [uzyexe/dockerfile-terraform](https://github.com/uzyexe/dockerfile-terraform) version
 - Update to terraform 0.9.2

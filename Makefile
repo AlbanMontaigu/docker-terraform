@@ -1,7 +1,7 @@
 .PHONY: build tests all
 
 DOCKER_IMAGE_NAME=amontaigu/terraform
-TERRAFORM_VERSION="0.9.4"
+TERRAFORM_VERSION="0.9.6"
 
 all: build test
 

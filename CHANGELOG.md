@@ -1,4 +1,7 @@
 
+## 0.9.6 (2017-05-30)
+- Update to terraform 0.9.6
+
 ## 0.9.4 (2017-05-09)
 - Update to terraform 0.9.4
 

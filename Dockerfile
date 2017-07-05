@@ -14,7 +14,7 @@ FROM alpine:3.5
 MAINTAINER alban.montaigu@gmail.com
 
 # Environment variables
-ENV TERRAFORM_VERSION="0.9.6"
+ENV TERRAFORM_VERSION="0.9.11"
 
 # System preparation & terraform installation
 RUN apk add --update wget ca-certificates unzip git bash m4 && \

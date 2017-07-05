@@ -1,5 +1,5 @@
 
-## 0.9.6 (2017-07-05)
+## 0.9.11 (2017-07-05)
 - Update to terraform 0.9.11
 - Update to alpine 3.6
 

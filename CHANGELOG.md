@@ -1,7 +1,7 @@
 
 ## 0.10.2 (2017-08-21)
 - Update to terraform 0.10.2
-- Move to circle ci 2 (and use docker 17.06.1 for image build)
+- Move to circle ci 2 (and use docker 17.06.1-ce for image build)
 - No more use of the old makefile since circle ci do the job
 
 ## 0.9.11 (2017-07-05)

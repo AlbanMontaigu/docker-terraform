@@ -38,6 +38,7 @@ jobs:
       - run:
           name: Run tests
           command: |
+            docker run -v /amontaigu_terraform:/app --entrypoint="ls -lisa" centos
             docker ps -a
             pwd
             ls -lisa /amontaigu_terraform

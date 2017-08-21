@@ -38,5 +38,6 @@ jobs:
       - run:
           name: Run tests
           command: |
+            pwd
             ls
             make tests

@@ -2,6 +2,7 @@
 ## 0.10.2 (2017-08-21)
 - Update to terraform 0.10.2
 - Move to circle ci 2
+- No more use of the old makefile since circle ci do the job
 
 ## 0.9.11 (2017-07-05)
 - Update to terraform 0.9.11

@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            docker run -v /amontaigu_terraform:/app centos ls -lisa /app
+            docker run 	-v /amontaigu_terraform:/app -w="/app/tests" centos ls -lisa
             docker ps -a
             pwd
             ls -lisa /amontaigu_terraform

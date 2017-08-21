@@ -38,6 +38,7 @@ jobs:
       - run:
           name: Run tests
           command: |
+            docker ps -a
             pwd
             ls -lisa /amontaigu_terraform
             ls -lisa /amontaigu_terraform/tests

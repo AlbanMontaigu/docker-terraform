@@ -40,5 +40,5 @@ jobs:
       - run:
           name: Run tests
           command: |
-            export TERRAFORM_VERSION=$(grep -o 'TERRAFORM_VERSION="([^"]+)"') /app/Dockerfile
+            export TERRAFORM_VERSION=$(grep -o 'TERRAFORM_VERSION="([^"]+)"' /app/Dockerfile)
             bats /app/tests

@@ -40,8 +40,5 @@ jobs:
       - run:
           name: Run tests
           command: |
-            pwd
-            ls -lisa
-            sed -nre 's/^.*TERRAFORM_VERSION="([^"]+)".*$/\1/p;q;' /app/Dockerfile
-            export TERRAFORM_VERSION=$(sed -nre 's/^.*TERRAFORM_VERSION="([^"]+)".*$/\1/p;q;' /app/Dockerfile)
-            bats /app/tests
+            export TERRAFORM_VERSION=$(sed -nre 's/^.*TERRAFORM_VERSION="([^"]+)".*$/\1/p;q;' Dockerfile)
+            bats tests

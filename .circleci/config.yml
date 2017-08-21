@@ -40,6 +40,6 @@ jobs:
       - run:
           name: Run tests
           command: |
-            cat Dockerfile
+            man sed
             sed -nre 's/^.*TERRAFORM_VERSION="([^"]+)".*$/\1/p;q;' Dockerfile
             bats tests

@@ -11,7 +11,7 @@ jobs:
           name: Install dependencies
           command: |
             apk add --no-cache \
-              make m4
+              make m4 bats
       - restore_cache:
           keys:
             - v1-{{ .Branch }}
@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            make build
+            docker build --cache-from=amontaigu_terraform --tag amontaigu/terraform .
       - run:
           name: Save Docker image layer cache
           command: |
@@ -38,9 +38,5 @@ jobs:
       - run:
           name: Run tests
           command: |
-            docker run 	-v /amontaigu_terraform:/app -w="/app/tests" centos ls -lisa
-            docker ps -a
-            pwd
-            ls -lisa /amontaigu_terraform
-            ls -lisa /amontaigu_terraform/tests
-            make tests
+            export TERRAFORM_VERSION=$(grep -Po 'TERRAFORM_VERSION="([^"]+)"')
+            bats /app/tests

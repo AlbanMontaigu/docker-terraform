@@ -11,7 +11,7 @@
 
 # Test terraform version
 @test "Terraform version is ${TERRAFORM_VERSION}" {
-	result="$(docker run ${DOCKER_IMAGE_NAME} version)"
+	result="$(docker run ${APP_DOCKER_IMAGE_NAME} version)"
 	[[ "$result" == *"Terraform v${TERRAFORM_VERSION}"* ]]
 	echo "-$result-"
 }

@@ -39,5 +39,5 @@ jobs:
           name: Run tests
           command: |
             pwd
-            ls
+            ls /amontaigu_terraform/tests
             make tests

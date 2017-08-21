@@ -40,6 +40,5 @@ jobs:
       - run:
           name: Run tests
           command: |
-            sed --help
-            sed -nre 's/^.*TERRAFORM_VERSION="([^"]+)".*$/\1/p;q;' Dockerfile
+            export TERRAFORM_VERSION=$(sed -n -r -e 's/^.*TERRAFORM_VERSION="([^"]+)".*$/\1/p;q;' Dockerfile)
             bats tests

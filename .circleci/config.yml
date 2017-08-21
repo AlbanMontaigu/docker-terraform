@@ -1,0 +1,41 @@
+version: 2
+jobs:
+  build:
+    working_directory: /amontaigu_terraform
+    docker:
+      - image: docker:17.06.1-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --no-cache \
+              make m4
+      - restore_cache:
+          keys:
+            - v1-{{ .Branch }}
+          paths:
+            - /caches/amontaigu_terraform.tar
+      - run:
+          name: Load Docker image layer cache
+          command: |
+            set +o pipefail
+            docker load -i /caches/amontaigu_terraform.tar | true
+      - run:
+          name: Build Docker image
+          command: |
+            make build
+      - run:
+          name: Save Docker image layer cache
+          command: |
+            mkdir -p /caches
+            docker save -o /caches/amontaigu_terraform.tar amontaigu_terraform
+      - save_cache:
+          key: v1-{{ .Branch }}-{{ epoch }}
+          paths:
+            - /caches/amontaigu_terraform.tar
+      - run:
+          name: Run tests
+          command: |
+            make tests

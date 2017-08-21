@@ -6,7 +6,7 @@ TERRAFORM_VERSION="0.10.2"
 all: build test
 
 build:
-	docker build --tag $(DOCKER_IMAGE_NAME) .
+	docker build --cache-from=amontaigu_terraform --tag $(DOCKER_IMAGE_NAME) .
 
 tests:
 	docker run \

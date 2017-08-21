@@ -1,6 +1,7 @@
 
 ## 0.10.2 (2017-08-21)
 - Update to terraform 0.10.2
+- Move to circle ci 2
 
 ## 0.9.11 (2017-07-05)
 - Update to terraform 0.9.11

@@ -44,6 +44,6 @@ jobs:
             bats tests
       - deploy:
           tag: /.*?/
-          commands: |
+          command: |
             docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
             docker push $APP_DOCKER_IMAGE_NAME $CIRCLE_TAG

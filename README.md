@@ -14,135 +14,21 @@ Simple file based configuration gives you a single view of your entire infrastru
 
 ## Dockerfile
 
-[**Trusted Build**](https://hub.docker.com/r/amontaigu/terraform/)
-
-This Docker image is based on the official [alpine:3.4](https://hub.docker.com/_/alpine/) base image.
+This Docker image is based on the official [alpine](https://hub.docker.com/_/alpine/) base image.
 
 ## How to use this image
 
 ```
 docker run --rm amontaigu/terraform [--version] [--help] <command> [<args>]
-
 ```
 
-## Using
-
-**Please note: Create by your Terraform configuration files (.tf) is `/data` directory**
-
-### terraform apply
-
-```
-docker run --rm -v /data:/data amontaigu/terraform apply [options]
-```
-
-### terraform destroy
-
-```
-docker run --rm -v /data:/data amontaigu/terraform destroy [options] [DIR]
-```
-
-### terraform fmt
-
-```
-docker run --rm -v /data:/data uzyexe/terraform fmt [options] [DIR]
-```
-
-### terraform get
-
-```
-docker run --rm -v /data:/data amontaigu/terraform get [options] PATH
-```
-
-### terraform graph
-
-```
-docker run --rm -v /data:/data amontaigu/terraform graph [options]
-```
-
-### terraform import
-
-```
-docker run --rm -v /data:/data uzyexe/terraform [options] ADDR ID
-```
-
-### terraform init
-
-```
-docker run --rm -v /data:/data amontaigu/terraform init [options] SOURCE [PATH]
-```
-
-### terraform output
-
-```
-docker run --rm -v /data:/data amontaigu/terraform output [options] NAME
-```
-
-### terraform plan
-
-```
-docker run --rm -v /data:/data amontaigu/terraform plan [options]
-```
-
-### terraform push
-
-```
-docker run --rm -v /data:/data amontaigu/terraform push [options]
-```
-
-### terraform refresh
-
-```
-docker run --rm -v /data:/data amontaigu/terraform refresh [options]
-```
-
-### terraform remote
-
-```
-docker run --rm -v /data:/data amontaigu/terraform remote [options]
-```
-
-### terraform show
-
-```
-docker run --rm -v /data:/data amontaigu/terraform show terraform.tfstate [options]
-```
-
-### terraform state <subcommand> [options] [args]
-
-```
-docker run --rm -v /data:/data uzyexe/terraform state <subcommand> [options] [args]
-```
-
-### terraform taint
-
-```
-docker run --rm -v /data:/data amontaigu/terraform taint [options] name
-```
-
-### terraform untaint
-
-```
-docker run --rm -v /data:/data uzyexe/terraform untaint [options] name
-```
-
-### terraform validate
-
-```
-docker run --rm -v /data:/data uzyexe/terraform validate
-```
-
-### terraform version
-
-```
-docker run --rm amontaigu/terraform version
-```
-
+**Please note:** Create by your Terraform configuration files (.tf) is `/data` directory
 
 # Authors
 
 * Shuji Yamada (<uzy.exe@gmail.com>)
+* Alban Montaigu (<alban.montaigu@gmail.com>)
 
 ## License
 
 This project is licensed under the terms of the MIT license.
-

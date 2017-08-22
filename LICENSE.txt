@@ -1,4 +1,4 @@
-Copyright (C) 2016 Shuji Yamada
+Copyright (C) 2017 Shuji Yamada / Alban Montaigu
 All Rights Reserved.
 
 MIT LICENSE

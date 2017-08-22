@@ -101,7 +101,7 @@ jobs:
           command: |
             if [ -n "${CIRCLE_TAG}" ]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
-              docker push $DOCKER_APP_IMAGE_NAME $CIRCLE_TAG
+              docker push $DOCKER_APP_IMAGE_NAME:$CIRCLE_TAG
             fi
 
 

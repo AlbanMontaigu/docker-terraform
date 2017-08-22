@@ -4,8 +4,8 @@ jobs:
     working_directory: /app
     docker:
       - image: docker:17.06.1-ce-git
-        environment:
-          APP_DOCKER_IMAGE_NAME: amontaigu/terraform
+    environment:
+      APP_DOCKER_IMAGE_NAME: amontaigu/terraform
     steps:
       - checkout
       - setup_remote_docker
@@ -13,7 +13,7 @@ jobs:
           name: Install dependencies
           command: |
             apk add --no-cache \
-              make m4 bats
+              bats
       - restore_cache:
           keys:
             - v1-{{ .Branch }}
@@ -43,7 +43,9 @@ jobs:
             export TERRAFORM_VERSION="$(sed -nre 's/^.*TERRAFORM_VERSION="([^"]+)".*$/\1/p;' Dockerfile | head -1)"
             bats tests
       - deploy:
-          tag: /.*?/
+          name: Push image to Docker hub
           command: |
-            docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-            docker push $APP_DOCKER_IMAGE_NAME $CIRCLE_TAG
+            if [ -n "${CIRCLE_TAG}" ]; then
+              docker login -u $DOCKER_USER -p $DOCKER_PASS
+              docker push $APP_DOCKER_IMAGE_NAME $CIRCLE_TAG
+            fi

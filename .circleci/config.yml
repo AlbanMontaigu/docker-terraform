@@ -98,12 +98,17 @@ workflows:
             branches:
               only: /.*/
       - test:
+          requires:
+            - build
           filters:
             tags:
               only: /.*/
             branches:
               only: /.*/
       - deploy:
+          requires:
+            - build
+            - test
           filters:
             tags:
               only: /.*/

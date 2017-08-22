@@ -42,3 +42,8 @@ jobs:
           command: |
             export TERRAFORM_VERSION="$(sed -nre 's/^.*TERRAFORM_VERSION="([^"]+)".*$/\1/p;' Dockerfile | head -1)"
             bats tests
+      - deploy:
+          tag: /.*?/
+          commands:
+            - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+            - docker push $APP_DOCKER_IMAGE_NAME $CIRCLE_TAG

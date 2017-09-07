@@ -1,6 +1,7 @@
 
 ## 0.10.4 (2017-09-07)
-- Update to terraform 0.10.4
+- UPDATE: update to terraform 0.10.4
+- UPDATE: update to docker 17.06.2-ce for build
 
 ## 0.10.2 (2017-08-21)
 - Update to terraform 0.10.2

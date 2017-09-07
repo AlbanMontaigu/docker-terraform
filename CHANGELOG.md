@@ -1,4 +1,7 @@
 
+## 0.10.4 (2017-09-07)
+- Update to terraform 0.10.4
+
 ## 0.10.2 (2017-08-21)
 - Update to terraform 0.10.2
 - Move to circle ci 2 (and use docker 17.06.1-ce for image build)

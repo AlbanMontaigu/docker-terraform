@@ -2,6 +2,7 @@
 ## 0.10.7 (2017-10-05)
 - UPDATE: update to terraform 0.10.7
 - UPDATE: maintainer added inside a LABEL
+- UPDATE: update to docker 17.09.0-ce for build
 
 ## 0.10.4 (2017-09-07)
 - UPDATE: update to terraform 0.10.4

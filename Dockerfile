@@ -11,7 +11,7 @@
 FROM alpine:3.6
 
 # Environment variables
-ENV TERRAFORM_VERSION="0.10.4"
+ENV TERRAFORM_VERSION="0.10.7"
 
 # System preparation & terraform installation
 RUN apk --no-cache add wget ca-certificates unzip git bash m4 && \

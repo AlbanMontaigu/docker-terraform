@@ -10,6 +10,9 @@
 # Base image
 FROM alpine:3.6
 
+# Maintainer
+LABEL maintainer="alban.montaigu@gmail.com"
+
 # Environment variables
 ENV TERRAFORM_VERSION="0.10.7"
 

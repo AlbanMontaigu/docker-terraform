@@ -20,7 +20,7 @@ ENV TERRAFORM_VERSION="0.10.7"
 RUN apk --no-cache add wget ca-certificates unzip git bash m4 && \
     wget -q -O /terraform.zip "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip" && \
     unzip /terraform.zip -d /bin && \
-    apk del --purge wget ca-certificates unzip && \
+    apk del --purge wget unzip && \
     rm -rf /var/cache/apk/* /terraform.zip
 
 # Volumes and workdir configuration

@@ -14,7 +14,7 @@ FROM alpine:3.6
 LABEL maintainer="alban.montaigu@gmail.com"
 
 # Environment variables
-ENV TERRAFORM_VERSION="0.10.7"
+ENV TERRAFORM_VERSION="0.10.8"
 
 # System preparation & terraform installation
 RUN apk --no-cache add wget ca-certificates unzip git bash m4 && \

@@ -1,4 +1,7 @@
 
+## 0.10.8 (2017-10-27)
+- UPDATE: update to terraform 0.10.8
+
 ## 0.10.7 (2017-10-12)
 - FEATURE: now any `*.tf.m4` files will be processed by `m4` and not only `main.tf.m4`
 - FEATURE: flag `--m4-opts` added to be able to pass options to `m4` (must be followed by `m4` flags between quotes)

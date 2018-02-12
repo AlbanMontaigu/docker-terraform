@@ -2,6 +2,7 @@
 ## 0.11.3 (2018-02-12)
 - UPDATE: update to terraform 0.11.3
 - UPDATE: update build to docker 17.12.0-ce
+- UPDATE: update to alpine 3.7
 
 ## 0.10.8 (2017-10-27)
 - UPDATE: update to terraform 0.10.8

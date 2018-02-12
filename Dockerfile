@@ -8,7 +8,7 @@
 # =======================================================================
 
 # Base image
-FROM alpine:3.6
+FROM alpine:3.7
 
 # Maintainer
 LABEL maintainer="alban.montaigu@gmail.com"

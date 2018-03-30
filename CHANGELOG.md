@@ -1,6 +1,7 @@
 
 ## 0.11.5 (2018-03-30)
 - UPDATE: bump to terraform 0.11.5
+- UPDATE: bump build to docker 18.03.0-ce
 
 ## 0.11.3 (2018-02-12)
 - UPDATE: update to terraform 0.11.3

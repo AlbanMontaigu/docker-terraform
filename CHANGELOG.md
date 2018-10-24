@@ -1,6 +1,7 @@
 
-## 0.11.10 (2018-10-24
+## 0.11.10 (2018-10-24)
 - UPDATE: bump to terraform 0.11.10
+- UPDATE: bump build to docker 18.06.1-ce
 
 ## 0.11.7 (2018-08-05)
 - UPDATE: bump to alpine 3.7
